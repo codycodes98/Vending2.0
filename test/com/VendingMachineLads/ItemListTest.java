@@ -13,8 +13,8 @@ public class ItemListTest {
         ItemList instance = new ItemList();
         Item fanta = new Item("Fanta",1.10);
         instance.addToItemList(fanta);
-        instance.getitemFromList(1);
-        assertThat(instance.getitemFromList(1), is(fanta));
+        instance.getItemFromList(1);
+        assertThat(instance.getItemFromList(1), is(fanta));
     }
     @Test
     public void testForMultipleItemsThenRetrieveSpecificItem(){
@@ -25,7 +25,7 @@ public class ItemListTest {
         instance.addToItemList(fanta);
         instance.addToItemList(coke);
         instance.addToItemList(sparklingWater);
-        assertThat(instance.getitemFromList(2), is(coke));
+        assertThat(instance.getItemFromList(2), is(coke));
     }
 
     @Test
@@ -35,6 +35,6 @@ public class ItemListTest {
         Item coke = new Item("Coke",1.20);
         instance.addToItemList(fanta);
         instance.addToItemList(coke);
-        assertThat(instance.getitemFromList(2),is(coke));
+        assertThat(instance.getItemFromList(2),is(coke));
     }
 }

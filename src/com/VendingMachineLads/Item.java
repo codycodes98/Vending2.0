@@ -25,4 +25,8 @@ public class Item {
                 ", itemPrice=" + itemPrice +
                 '}';
     }
+
+    public boolean dispence() {
+        return false;
+    }
 }
