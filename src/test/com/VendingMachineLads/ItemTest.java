@@ -23,7 +23,19 @@ public class ItemTest {
     public void itemPriceAndNameTest(){
         Item fanta = new Item("Fanta",1.10);
 
-        assertThat(fanta.toString(), is("Item{itemName='Fanta', itemPrice=1.1}"));
+        assertThat(fanta.toString(), is("Item Name :'Fanta'Item Price1.1"));
+    }
+
+    @Test
+    public void should_DispenseItem_WhenGivenFanta(){
+        Item fanta = new Item("Fanta",1.10);
+        assertTrue(fanta.dispence());
+    }
+
+    @Test
+    public void should_ReturnFalse_WhenGivenInvalidItemWithNoName(){
+        Item falseItem = new Item("Fanta",0.00);
+        assertThat(falseItem.dispence(),is(false));
     }
 
 }

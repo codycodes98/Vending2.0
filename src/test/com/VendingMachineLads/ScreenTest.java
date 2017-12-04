@@ -26,14 +26,4 @@ public class ScreenTest {
 
         assertThat(result,is(shouldBe));
     }
-
-    @Test
-    public void should_RejectAnyObject_WhenGivenNonStringOrNumber(){
-        String shouldBe = "=========================\n"+
-                "Invalid display object String\n" +
-                "=========================\n";
-        Boolean conditionalForTest = true;
-
-        assertThat(testObject.display(conditionalForTest),is(shouldBe));
-    }
 }
