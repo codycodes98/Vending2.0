@@ -3,7 +3,6 @@ package com.VendingMachineLads;
 import com.VendingMachineLads.money.MoneyStore;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ItemList {
@@ -25,9 +24,16 @@ public class ItemList {
         return null;
     }
 
-    public List<Item> getItemsFromList(MoneyStore moneyStore) {
-        //get items and return any that cost less than moneyStore total
-        return null;
+    public boolean getItemsFromList(MoneyStore moneyStore, Button button) {
+        Double moneyOfItemSpecified = button.item.getItemPrice();
+        String nameOfItemSpecified = button.item.getItemName();
+        if (moneyOfItemSpecified >= moneyStore.getCurrentMoneyInMachine()){
+            VendingMachine.Screen.formatForScreen("Dispensed : " + nameOfItemSpecified);
+            return button.item.dispence();
+        }else{
+            VendingMachine.Screen.formatForScreen("Not enough Money");
+            return false;
+        }
     }
 }
 
