@@ -6,12 +6,16 @@ import com.VendingMachineLads.money.MoneyStore;
 public class VendingMachine {
 
 
-    public Dispenser Dispenser;
+    public static Dispenser Dispenser;
     public static Screen Screen;
     public static MoneyStore MoneyStore;
-    public ItemList ItemList;
+    public static ItemList ItemList;
 
-    public void onStartUp(){
+    public static void main (String[] args){
+        onStartUp();
+    }
+
+    public static void onStartUp(){
         Dispenser = new Dispenser();
         Screen = new Screen();
         MoneyStore = new MoneyStore(0);

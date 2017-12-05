@@ -14,7 +14,7 @@ public class MoneyTest implements Money{
 //    }
 
     @Test
-    public void shouldConvertIntegerToDouble_WhenGivenValueOfOne(){
+    public void shouldConvertIntegerToDouble_whenGivenValueOfOne(){
 
         assertThat(Money.returnValue(1),is(1.00));
         }
