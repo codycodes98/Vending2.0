@@ -16,7 +16,7 @@ public class ScreenTest {
     }
 
     @Test
-    public void should_ReturnStringFormattedWithBars_WhenGivenString(){
+    public void shouldReturnStringFormattedWithBarsWhenGivenString(){
         String currentMoney = "£1.40 Left, Selected Fanta";
         String shouldBe = "=========================\n"+
                           "£1.40 Left, Selected Fanta\n" +

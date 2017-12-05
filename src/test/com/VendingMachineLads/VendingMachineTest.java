@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class VendingMachineTest {
 
     @Test
-    public void should_ReturnNull_WhenStartUpIsNotCalled(){
+    public void shouldReturnNullWhenStartUpIsNotCalled(){
         VendingMachine testObject = new VendingMachine();
 
         assertNull(testObject.Dispenser);
@@ -16,7 +16,7 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void should_ReturnNotNull_WhenStartUpIsCalled(){
+    public void shouldReturnNotNullWhenStartUpIsCalled(){
         VendingMachine testObject = new VendingMachine();
 
         testObject.onStartUp();
@@ -25,7 +25,4 @@ public class VendingMachineTest {
         assertNotNull(testObject.MoneyStore);
         assertNotNull(testObject.Screen);
     }
-
-
-
 }
